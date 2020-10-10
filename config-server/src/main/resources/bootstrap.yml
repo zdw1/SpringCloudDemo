@@ -1,0 +1,42 @@
+#1.Git上面是有这个config-client-dev的配置文件的所以是config-clent,根据配置文件名称来的，需要注意
+#2.客户端加载到的配置文件的配置项会覆盖本项目已有配置。
+#  比如客户端你自己配置的端口是8881，但是如果读取到config-clent-dev这个配置文件中也有配置端口为8882，那么此时客户端访问的地址应该是8882
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+#          uri: https://github.com/forezp/SpringcloudConfig/
+          uri: https://github.com/zdw1/springCloud/
+          search-paths:
+          - respo
+          username: zdw1
+          password: zhangdw@111
+      label: master
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"    
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:123456@localhost:8761/eureka/
+#spring.application.name=config-server 
+#server.port=8888
+#spring.cloud.config.server.git.uri=https://github.com/forezp/SpringcloudConfig/
+#spring.cloud.config.server.git.search-paths=respo
+#spring.cloud.config.label=master
+#spring.cloud.config.server.git.username=
+#spring.cloud.config.server.git.password=
+#eureka.client.service-url.defaultZone=http://admin:123456@localhost:8761/eureka/

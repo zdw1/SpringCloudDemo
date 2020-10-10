@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;application-peer1.yml&apos; to &apos;application-peer1.yml&apos;&#x0D;&#x0A;- Original project: &apos;eureka-server&apos;&#x0D;&#x0A;- Destination element: &apos;application-peer1.yml&apos;&#x0D;&#x0A;- Original element: &apos;application-peer1.yml&apos;" description="Copy file" element1="src/main/resources/application-peer1.yml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1594192156876" target="/eureka-server/src/main/resources/application-peer1.yml" units="0" version="1.0"/>
+</session>
